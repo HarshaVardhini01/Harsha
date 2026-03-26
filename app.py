@@ -7,7 +7,7 @@ def add(a, b):
 
 @app.route("/")
 def home():
-    return "Hello Flask"
+    return "Addition: " + str(add(5, 3))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000)

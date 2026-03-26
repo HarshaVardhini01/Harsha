@@ -1,13 +1,10 @@
 from flask import Flask
 
-app = Flask(_name_)
-
-def add(a, b):
-    return a + b
+app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Addition: " + str(add(5, 3))
+    return "Hello Jenkins!"
 
-if _name_ == "_main_":
-    app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run()
